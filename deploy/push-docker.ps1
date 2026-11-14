@@ -61,7 +61,7 @@ if ($LASTEXITCODE -ne 0) {
 
 $sizeMb = [math]::Round((Get-Item -LiteralPath $archive).Length / 1MB, 2)
 Write-Host "[scp] $sizeMb MB -> ${Server}:/tmp/acp-docker.tar.gz"
-& scp.exe -P $Port -i $Key -o BatchMode=yes -o StrictHostKeyChecking=accept-new $archive "${Server}:/tmp/acp-docker.tar.gz"
+& scp.exe -q -P $Port -i $Key -o BatchMode=yes -o StrictHostKeyChecking=accept-new $archive "${Server}:/tmp/acp-docker.tar.gz"
 if ($LASTEXITCODE -ne 0) {
     throw "scp failed with exit code $LASTEXITCODE"
 }
@@ -73,8 +73,13 @@ if ($Logs) { $deployArgs += " --logs" }
 $remote = "set -e; mkdir -p '$RemoteDir'; tar -xzf /tmp/acp-docker.tar.gz -C '$RemoteDir'; cd '$RemoteDir'; NPM_REGISTRY='$NpmRegistry' bash deploy.sh$deployArgs; rm -f /tmp/acp-docker.tar.gz"
 
 Write-Host "[ssh] deploying to $RemoteDir ..."
+# Docker build 的进度输出走 stderr；PowerShell 5.1 在 EAP=Stop 下会把 native stderr
+# 当成异常直接中止脚本，导致远端部署还没结束本地就报错退出。
+$prevEap = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
 & ssh.exe -p $Port -i $Key -o BatchMode=yes -o StrictHostKeyChecking=accept-new $Server $remote
 $code = $LASTEXITCODE
+$ErrorActionPreference = $prevEap
 
 Remove-Item -LiteralPath $archive -Force -ErrorAction SilentlyContinue
 

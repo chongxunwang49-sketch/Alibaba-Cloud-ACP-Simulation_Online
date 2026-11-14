@@ -55,6 +55,8 @@ async function submitAnswer(): Promise<void> {
   try {
     const r = await api.practiceAnswer({ questionId: q.id, selected: selected.value })
     resultMap.value = { ...resultMap.value, [q.id]: r }
+    // 手机/窄屏：判分后直接展开右侧抽屉，避免解析藏在按钮后面
+    if (window.innerWidth <= 1200) inspectorOpen.value = true
   } catch (err) {
     submitError.value = err instanceof Error ? err.message : '提交失败，请重试'
   } finally {
