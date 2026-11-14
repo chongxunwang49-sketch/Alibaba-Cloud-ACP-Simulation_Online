@@ -321,3 +321,6 @@ docker compose exec mongo mongosh -u "$MONGO_ROOT_USERNAME" -p "$MONGO_ROOT_PASS
 - 注意：本机 Edge 对裸 IP 导航会报 `ERR_BLOCKED_BY_CLIENT`（与服务器无关），验收截图通过
   `--host-resolver-rules=MAP acp.internal 120.55.234.224` 访问 `http://acp.internal/` 生成；
   正常浏览器直接访问 `http://120.55.234.224/` 即可。
+- 移动端：按 390 × 844 验收，五个主页面 `scrollWidth` 均为 390，无横向滚动；侧栏与答题卡改为抽屉，
+  模拟考顶栏精简为计时/退出/交卷。截图见 `docs/screenshots/mobile-*.png`。
+- 代码仓库：GitHub 与 Gitee 的 `master` 分支均已推送首版（commit `e95b449` 起）。

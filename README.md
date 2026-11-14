@@ -2,6 +2,10 @@
 
 面向阿里云 ACP（大模型方向）的模拟考试系统：951 道题的题库 + 50 单选/25 多选组卷 + 服务端判分 + 错题本 + 成绩统计。
 
+- GitHub：<https://github.com/chongxunwang49-sketch/Alibaba-Cloud-ACP-Simulation_Online>
+- Gitee：<https://gitee.com/wcx547379191/alibaba-cloud-acp-simulation_-online>
+- 线上：<http://120.55.234.224/>（手机可直接打开）
+
 ```
 浏览器 ──80──> web 容器（Nginx + Vue dist）
                    └──/api──> api 容器（Express + Mongoose，3004 仅内网）
@@ -114,6 +118,13 @@ docker compose ps         # 三个服务都应为 healthy
 - 状态（2026-11-14）：`acp-api` / `acp-mongo` / `acp-web` 三容器 `healthy`，`restart=always`，
   951 题自动导入，`/api/meta` 返回 `total=951`、`explained=299`
 - 截图：`docs/screenshots/public-home.png`、`public-practice.png`、`docker-compose-ps.png`
+
+## 移动端适配
+
+- 断点：`1200px`（刷题右栏收成抽屉）、`980px`（左侧导航收成汉堡抽屉）、`720px`（顶栏/表格/模拟考顶栏精简）。
+- 手机端效果：侧栏抽屉 + 遮罩、答题卡/解析抽屉、选项大按钮、表格只保留关键列、模拟考顶栏只留计时/退出/交卷，页面无横向滚动。
+- 验收尺寸：390 × 844（iPhone 14/15 逻辑像素），所有页面 `document.documentElement.scrollWidth === 390`。
+- 截图：[mobile-home.png](docs/screenshots/mobile-home.png)、[mobile-practice.png](docs/screenshots/mobile-practice.png)、[mobile-exam.png](docs/screenshots/mobile-exam.png)、[mobile-questions.png](docs/screenshots/mobile-questions.png)。
 
 ## 已知限制
 
