@@ -1,0 +1,12 @@
+# 前端镜像的构建上下文是仓库根目录，尽量缩小上下文
+**/node_modules
+**/dist
+**/.git
+**/.env
+**/*.log
+
+# 不参与镜像构建的大目录
+ACP模拟
+docs
+deploy/legacy-host
+_verify

@@ -1,0 +1,1018 @@
+{
+  "generatedAt": "2026-11-14T07:51:05.334Z",
+  "bankFile": "ACP模拟/questions.json",
+  "total": 951,
+  "overridesApplied": 0,
+  "distribution": {
+    "app-dev": {
+      "name": "大模型应用开发",
+      "ratio": 17,
+      "count": 211,
+      "single": 144,
+      "multiple": 67
+    },
+    "prompt": {
+      "name": "大模型提示词工程",
+      "ratio": 15,
+      "count": 140,
+      "single": 89,
+      "multiple": 51
+    },
+    "rag": {
+      "name": "大模型检索增强",
+      "ratio": 20,
+      "count": 323,
+      "single": 229,
+      "multiple": 94
+    },
+    "finetune": {
+      "name": "大模型微调",
+      "ratio": 16,
+      "count": 91,
+      "single": 62,
+      "multiple": 29
+    },
+    "agent": {
+      "name": "多 Agent 及多模态应用",
+      "ratio": 16,
+      "count": 111,
+      "single": 72,
+      "multiple": 39
+    },
+    "prod": {
+      "name": "生产环境应用实践",
+      "ratio": 16,
+      "count": 75,
+      "single": 48,
+      "multiple": 27
+    }
+  },
+  "confidence": {
+    "high": 340,
+    "medium": 439,
+    "low": 160,
+    "none": 12
+  },
+  "lowConfidence": [
+    {
+      "id": "q005",
+      "topic": "prompt",
+      "score": 5,
+      "question": "某公司正在开发一款智能客服系统，用于为用户提供多语言支持。在处理用户问题时，系统需要准确翻译并解释一些内部非公开的领域术语。为了确保翻译和解释的高准确性，以下哪"
+    },
+    {
+      "id": "q020",
+      "topic": "rag",
+      "score": 4,
+      "question": "分词（Tokenization）的主要作用是什么？"
+    },
+    {
+      "id": "q022",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "大模型如何判断什么时候应该停止输出？"
+    },
+    {
+      "id": "q055",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "把API Key配置到环境变量里有哪些优点?"
+    },
+    {
+      "id": "q070",
+      "topic": "rag",
+      "score": 2,
+      "question": "RAG（Retrieval Augmented Generation）的主要目的是什么？"
+    },
+    {
+      "id": "q090",
+      "topic": "rag",
+      "score": 4,
+      "question": "在示例中，以下哪些任务需要经过RAG链路来生成答案？"
+    },
+    {
+      "id": "q091",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "在优化 answer correctness 指标时，以下哪种方法可以提升生成答案的准确度？"
+    },
+    {
+      "id": "q096",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在以下代码片段中，extract_tags函数的作用是什么？"
+    },
+    {
+      "id": "q100",
+      "topic": "prompt",
+      "score": 4,
+      "question": "在私有知识问答场景中，直接传入私域知识相关的参考信息的缺点是什么?"
+    },
+    {
+      "id": "q103",
+      "topic": "rag",
+      "score": 4,
+      "question": "在优化检索效果时，以下哪种方法可以提升文档的层次分明性？"
+    },
+    {
+      "id": "q106",
+      "topic": "finetune",
+      "score": 2,
+      "question": "在代码中，Dataset.from_dict(data_samples) 的主要作用是什么？"
+    },
+    {
+      "id": "q108",
+      "topic": "rag",
+      "score": 5,
+      "question": "在RAG应用中，存储索引的主要目的是什么？"
+    },
+    {
+      "id": "q119",
+      "topic": "prompt",
+      "score": 2,
+      "question": "在示例中，以下哪种任务可以直接输入给大模型生成答案？"
+    },
+    {
+      "id": "q120",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "以下代码片段的作用是什么？os.environ[\"OPENAI_API_KEY\"]=\"your-api-key-here\""
+    },
+    {
+      "id": "q121",
+      "topic": "rag",
+      "score": 3,
+      "question": "在 Answer Correctness 的计算过程中，以下哪个指标用于衡量 answer 与 ground_truth 在事实描述上的差异？"
+    },
+    {
+      "id": "q124",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在以下代码片段中，response_format={\"type\": \"json_object\"}的作用是什么?"
+    },
+    {
+      "id": "q136",
+      "topic": "prompt",
+      "score": 4,
+      "question": "在意图识别中，以下哪种方法不需要修改模型本身的参数？"
+    },
+    {
+      "id": "q142",
+      "topic": "rag",
+      "score": 3,
+      "question": "在优化检索效果时，以下哪些方法可以提升大模型对参考信息的查找效率？"
+    },
+    {
+      "id": "q147",
+      "topic": "prompt",
+      "score": 4,
+      "question": "为了让大模型能够回答私域知识问题，以下哪种方法更加简便且高效？"
+    },
+    {
+      "id": "q151",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在以下代码片段中，seed=42的作用是什么？"
+    },
+    {
+      "id": "q155",
+      "topic": "rag",
+      "score": 4,
+      "question": "在优化检索效果时，以下哪些方法可以提升文档的结构性？"
+    },
+    {
+      "id": "q156",
+      "topic": "rag",
+      "score": 5,
+      "question": "在构建 RAG 应用时，哪种技术适合处理大规模文本数据？"
+    },
+    {
+      "id": "q161",
+      "topic": "rag",
+      "score": 3,
+      "question": "在 Answer Correctness 的计算过程中，事实准确度是通过什么模型生成的？"
+    },
+    {
+      "id": "q169",
+      "topic": "prompt",
+      "score": 4,
+      "question": "在意图识别中，以下哪种方法涉及调整模型的部分或全部参数？"
+    },
+    {
+      "id": "q172",
+      "topic": "prod",
+      "score": 3,
+      "question": "在代码中，score.to_pandas() 的主要作用是什么?"
+    },
+    {
+      "id": "q176",
+      "topic": "rag",
+      "score": 5,
+      "question": "在RAG应用的生成阶段，大模型的主要作用是什么？"
+    },
+    {
+      "id": "q179",
+      "topic": "rag",
+      "score": 5,
+      "question": "在代码中，similarity_top_k=5 的主要作用是什么？"
+    },
+    {
+      "id": "q181",
+      "topic": "app-dev",
+      "score": 1,
+      "question": "在代码中，data_samples 字典的主要作用是什么？"
+    },
+    {
+      "id": "q183",
+      "topic": "rag",
+      "score": 4,
+      "question": "在优化检索效果时，以下哪种方法可以提升文档的结构性？"
+    },
+    {
+      "id": "q186",
+      "topic": "prod",
+      "score": 3,
+      "question": "在代码中，evaluate函数的主要作用是什么？"
+    },
+    {
+      "id": "q192",
+      "topic": "rag",
+      "score": 4,
+      "question": "在构建 RAG 应用时，以下哪些是内存向量存储的适用场景？"
+    },
+    {
+      "id": "q203",
+      "topic": "rag",
+      "score": 5,
+      "question": "在问题改写中，以下哪种方法通过大模型生成更完整的问题？"
+    },
+    {
+      "id": "q207",
+      "topic": "prompt",
+      "score": 3,
+      "question": "在ask_llm_route函数中，如果问题类型是“公司内部文档查询”，会使用哪个方法？"
+    },
+    {
+      "id": "q210",
+      "topic": "prompt",
+      "score": 3,
+      "question": "在ask_ilm_route函数中，如果问题类型无法识别，会返回什么？"
+    },
+    {
+      "id": "q212",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在以下代码片段中，client.chat.completions.create的作用是什么？"
+    },
+    {
+      "id": "q222",
+      "topic": "rag",
+      "score": 5,
+      "question": "在创建提问引擎时，index.as_query_engine方法的主要作用是什么？"
+    },
+    {
+      "id": "q236",
+      "topic": "app-dev",
+      "score": 1,
+      "question": "在代码中，index.as_query_engine 方法的主要作用是什么？"
+    },
+    {
+      "id": "q242",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在以下代码片段中，is_chat_model=True的作用是什么？"
+    },
+    {
+      "id": "q249",
+      "topic": "rag",
+      "score": 3,
+      "question": "在优化检索效果时，以下哪些方法可以提升大模型对参考信息的理解？"
+    },
+    {
+      "id": "q251",
+      "topic": "rag",
+      "score": 3,
+      "question": "在创建索引时，以下哪些方法被使用？"
+    },
+    {
+      "id": "q258",
+      "topic": "rag",
+      "score": 5,
+      "question": "在问题改写中，以下哪种方法使用大模型扩充用户问题？"
+    },
+    {
+      "id": "q264",
+      "topic": "app-dev",
+      "score": 1,
+      "question": "在代码中，OpenAllLike 类的主要作用是什么?"
+    },
+    {
+      "id": "q269",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在以下代码片段中，completion.choices[0].message.content的作用是什么？"
+    },
+    {
+      "id": "q276",
+      "topic": "prod",
+      "score": 3,
+      "question": "在代码中，answer_correctness 指标的主要作用是什么？"
+    },
+    {
+      "id": "q277",
+      "topic": "rag",
+      "score": 3,
+      "question": "在 Answer Correctness 的计算过程中，以下哪个模型用于生成观点列表？"
+    },
+    {
+      "id": "q280",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在大模型推理阶段，模型如何选择下一个输出的Token?"
+    },
+    {
+      "id": "q289",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在以下代码片段中，presence_penalty=0.6的作用是什么？"
+    },
+    {
+      "id": "q295",
+      "topic": "rag",
+      "score": 4,
+      "question": "以下描述中错误的是?"
+    },
+    {
+      "id": "q306",
+      "topic": "finetune",
+      "score": 2,
+      "question": "在训练大模型时，为防止信息泄露，可以采取的有效措施是？"
+    },
+    {
+      "id": "q313",
+      "topic": "app-dev",
+      "score": 1,
+      "question": "为了加强大语言模型生成内容的信任机制，哪项措施最具有效果？"
+    },
+    {
+      "id": "q320",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在开发智能新闻摘要应用的过程中，工程师利用大语言模型来生成文章摘要。假设在某个例子中，模型需决定摘要中下一个词汇，已知“经济”之后最可能的两个词汇按概率高低依次"
+    },
+    {
+      "id": "q321",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "利用代码生成器插件通过大模型API可以实现什么功能?"
+    },
+    {
+      "id": "q337",
+      "topic": "app-dev",
+      "score": 1,
+      "question": "关于大模型内容生成过程中的信任机制，以下哪项措施可以提高用户对生成内容的信任？"
+    },
+    {
+      "id": "q345",
+      "topic": "agent",
+      "score": 3,
+      "question": "在大模型应用系统中，为了缓解有限长上下文问题，下列哪项措施不是通常采用的方法？"
+    },
+    {
+      "id": "q348",
+      "topic": "prod",
+      "score": 3,
+      "question": "在使用大型语言模型之前，用户首先应该做什么？"
+    },
+    {
+      "id": "q352",
+      "topic": "agent",
+      "score": 2,
+      "question": "利用大模型处理文本时，如果需要模型理解并回应与当前时间相关的问题，最可能用到的插件是？"
+    },
+    {
+      "id": "q360",
+      "topic": "finetune",
+      "score": 1,
+      "question": "在大型语言模型中，为什么需要对模型生成的内容进行检查？"
+    },
+    {
+      "id": "q363",
+      "topic": "agent",
+      "score": 3,
+      "question": "在通信实时性要求极高的场景中，直接通信往往效率更高，以下哪个通讯方式的效率较低？"
+    },
+    {
+      "id": "q365",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在批量处理上万个问卷的过程中，大模型API相比传统的人工处理方式，最大的优势是什么？"
+    },
+    {
+      "id": "q373",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "增强大模型能力的插件通常是通过什么方式与大模型集成的？"
+    },
+    {
+      "id": "q379",
+      "topic": "prod",
+      "score": 3,
+      "question": "以下关于大模型推理过程的描述中，正确的是？"
+    },
+    {
+      "id": "q382",
+      "topic": "agent",
+      "score": 2,
+      "question": "开启代码解释器插件后，大模型能够直接实现什么操作？"
+    },
+    {
+      "id": "q389",
+      "topic": "agent",
+      "score": 2,
+      "question": "代码解释器插件的主要作用是什么？"
+    },
+    {
+      "id": "q392",
+      "topic": "finetune",
+      "score": 2,
+      "question": "以下哪个任务最适合使用大语言模型？"
+    },
+    {
+      "id": "q395",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "以下哪种方式可以更好地处理大语言模型返回结果中可能存在的错误或异常？"
+    },
+    {
+      "id": "q396",
+      "topic": "prod",
+      "score": 3,
+      "question": "如果让大语言模型输出意图分类置信度，但我们发现大语言模型意图分类结果的置信度普遍较低，应该如何处理？"
+    },
+    {
+      "id": "q414",
+      "topic": "rag",
+      "score": 4,
+      "question": "在构建RAG应用时，以下关于句子滑窗检索的优势描述正确的是哪一项？"
+    },
+    {
+      "id": "q415",
+      "topic": "rag",
+      "score": 4,
+      "question": "以下哪种方法最适合用于解析PDF和Word文档中的文本内容，以便进行后续的RAG处理？"
+    },
+    {
+      "id": "q416",
+      "topic": "rag",
+      "score": 3,
+      "question": "以下代码片段中，StorageContext的作用是什么？"
+    },
+    {
+      "id": "q418",
+      "topic": "rag",
+      "score": 4,
+      "question": "通过LlamaIndex创建RAG应用时，一份知识文件传入RAG应用的顺序是以下哪一项？"
+    },
+    {
+      "id": "q421",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "以下哪个代码片段最适合帮助RAG应用将文本片段转换为向量表示？"
+    },
+    {
+      "id": "q424",
+      "topic": "prompt",
+      "score": 4,
+      "question": "在调用大语言模型对话的API过程中，如果要修改生成摘要的函数，使其生成的摘要不超过80个字，应该如何修改？"
+    },
+    {
+      "id": "q427",
+      "topic": "agent",
+      "score": 3,
+      "question": "RAG应用在处理表格数据时，下列哪种方法能更好地保留表格的语义信息并方便后续查询？"
+    },
+    {
+      "id": "q428",
+      "topic": "agent",
+      "score": 3,
+      "question": "在开发基于大语言模型的RAG应用过程中，下哪种做法不能保证“关键数据的语义独立性与完整性”？"
+    },
+    {
+      "id": "q434",
+      "topic": "prod",
+      "score": 3,
+      "question": "在下列哪项任务中，大语言模型可能不是最佳工具选择？"
+    },
+    {
+      "id": "q441",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "你正在使用大语言模型逐条输出检测结果。以下哪种数据结构最适合存储和处理这些结果？"
+    },
+    {
+      "id": "q443",
+      "topic": "rag",
+      "score": 2,
+      "question": "在通过大语言模型检测文档内容中是否存在营销表达时，下列哪种方法可以更全面地识别问题？"
+    },
+    {
+      "id": "q457",
+      "topic": "agent",
+      "score": 3,
+      "question": "在使用大模型提炼图文课程内容时，以下哪些指导原则是正确的？"
+    },
+    {
+      "id": "q464",
+      "topic": "finetune",
+      "score": 1,
+      "question": "在 Answer Correctness 的计算过程中，以下哪些是事实准确度的比较对象？"
+    },
+    {
+      "id": "q469",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "在优化 answer correctness 指标时，以下哪些措施是可行的？"
+    },
+    {
+      "id": "q470",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "在RAG应用的检索与生成阶段，主要优势包括哪些？"
+    },
+    {
+      "id": "q473",
+      "topic": "prompt",
+      "score": 4,
+      "question": "以下哪些方法可以让大模型能够回答私域知识问题?"
+    },
+    {
+      "id": "q476",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在构建 RAG 应用时，大模型可以用于哪些其他应用场景？"
+    },
+    {
+      "id": "q477",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在ask_ilm_route函数中，以下哪些是可能的输出？"
+    },
+    {
+      "id": "q490",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在代码中，以下哪些是 OpenAlLike 类的参数？"
+    },
+    {
+      "id": "q493",
+      "topic": "rag",
+      "score": 3,
+      "question": "在保存与加载索引时，以下哪些方法被使用？"
+    },
+    {
+      "id": "q495",
+      "topic": "rag",
+      "score": 4,
+      "question": "在构建 RAG 应用时，以下哪些是云服务向量存储的适用场景？"
+    },
+    {
+      "id": "q500",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在代码中，以下哪些是 index.as_query_engine 方法的参数？"
+    },
+    {
+      "id": "q503",
+      "topic": "rag",
+      "score": 3,
+      "question": "在 Answer Correctness 的计算过程中，以下哪些模型被使用？"
+    },
+    {
+      "id": "q509",
+      "topic": "prompt",
+      "score": 4,
+      "question": "在意图识别中，以下哪些方法可以帮助大模型进行意图识别？"
+    },
+    {
+      "id": "q512",
+      "topic": "rag",
+      "score": 4,
+      "question": "RAG应用的主要组成部分包括哪些？"
+    },
+    {
+      "id": "q514",
+      "topic": "finetune",
+      "score": 1,
+      "question": "在 Answer Correctness 的计算过程中，以下哪些是大模型的作用？"
+    },
+    {
+      "id": "q519",
+      "topic": "prompt",
+      "score": 2,
+      "question": "在优化检索效果时，以下哪些是 Markdown 格式的特点？"
+    },
+    {
+      "id": "q521",
+      "topic": "rag",
+      "score": 5,
+      "question": "在加载本地索引文件时，以下哪些参数可以设置？"
+    },
+    {
+      "id": "q528",
+      "topic": "rag",
+      "score": 4,
+      "question": "RAG应用通常包含哪两个主要部分?"
+    },
+    {
+      "id": "q530",
+      "topic": "prompt",
+      "score": 4,
+      "question": "在私有知识问答场景中，直接传入私域知识相关的参考信息可能导致哪些问题？"
+    },
+    {
+      "id": "q535",
+      "topic": "prompt",
+      "score": 3,
+      "question": "在ask_llm_route函数中，以下哪些是可能的处理流程？"
+    },
+    {
+      "id": "q550",
+      "topic": "rag",
+      "score": 4,
+      "question": "在构建 RAG 应用时，以下哪些是内存向量存储的特点？"
+    },
+    {
+      "id": "q558",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在实际工作中，哪些因素可能影响你构建 RAG 应用的速度？"
+    },
+    {
+      "id": "q573",
+      "topic": "app-dev",
+      "score": 1,
+      "question": "在提取标签的过程中，以下哪些操作是正确的？"
+    },
+    {
+      "id": "q595",
+      "topic": "rag",
+      "score": 1,
+      "question": "以下关于分词化的描述中，错误的是？"
+    },
+    {
+      "id": "q602",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "在自动化处理问卷调查数据时，以下哪些步骤是适当的？"
+    },
+    {
+      "id": "q613",
+      "topic": "finetune",
+      "score": 5,
+      "question": "大模型具有以下哪些特点?"
+    },
+    {
+      "id": "q625",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "在调用大语言模型对话的API过程中，关于abstract_generator(document)函数，以下说法正确的有哪些？"
+    },
+    {
+      "id": "q626",
+      "topic": "prompt",
+      "score": 5,
+      "question": "在使用大模型生成课程内容的过程中，建议通过以下哪些方式提高生成内容的质量和准确性？"
+    },
+    {
+      "id": "q631",
+      "topic": "rag",
+      "score": 5,
+      "question": "通过Llamaindex创建RAG应用时，编写了如下代码，关于这段代码作用的描述正确的有哪些？"
+    },
+    {
+      "id": "q639",
+      "topic": "finetune",
+      "score": 3,
+      "question": "以下哪些方法可以有效降低大语言模型在私域场景下泄露敏感信息的风险？"
+    },
+    {
+      "id": "q657",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "下列代码片段中，哪些涉及模型训练过程中的正则化或优化策略？"
+    },
+    {
+      "id": "q662",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "以下哪些代码片段可以用于检测用户输入中是否包含敏感词？"
+    },
+    {
+      "id": "q664",
+      "topic": "app-dev",
+      "score": 4,
+      "question": "Assistant API 的Assistant 类的各项功能中涵盖了以下哪些操作？"
+    },
+    {
+      "id": "q671",
+      "topic": "rag",
+      "score": 5,
+      "question": "通过LlamaIndex 创建RAG 应用，关于下面这段代码作用的描述正确的有哪些？def get_documents(path):documents = Si"
+    },
+    {
+      "id": "q673",
+      "topic": "agent",
+      "score": 3,
+      "question": "下哪种做法不能“保证关键数据的语义独立性与完整性”？"
+    },
+    {
+      "id": "q675",
+      "topic": "rag",
+      "score": 2,
+      "question": "句子窗口检索的优势在于："
+    },
+    {
+      "id": "q682",
+      "topic": "prod",
+      "score": 3,
+      "question": "在下列哪项任务中，大模型可能不是最佳工具选择？"
+    },
+    {
+      "id": "q684",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "在创建一个消息（Message）时，需要传递哪个参数来指定线程ID？"
+    },
+    {
+      "id": "q688",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "你正在使用大模型逐条输出检测结果。以下哪种数据结构最适合存储和处理这些结果？"
+    },
+    {
+      "id": "q690",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "以下哪个代码片段能够正确处理classify_intent 函数可能抛出的异常，并打印错误信息？"
+    },
+    {
+      "id": "q692",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "假设你需要统计每种意图出现的次数，以下哪个代码片段实现了这个功能？"
+    },
+    {
+      "id": "q693",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "以下哪个代码片段能够正确遍历feedback_list 并打印每个问题的意图？feedback_list的格式为[(1, \"问题1\"), (2, \"问题2\"),"
+    },
+    {
+      "id": "q704",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "以下代码片段中，哪一个是用于计算模型预测结果（前向传播）的？"
+    },
+    {
+      "id": "q706",
+      "topic": "rag",
+      "score": 2,
+      "question": "在检测文档内容中是否存在营销性表达时，下列哪种方法可以更全面地识别问题？"
+    },
+    {
+      "id": "q710",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "以下哪个代码片段展示了正确的用户（user）提问方式？"
+    },
+    {
+      "id": "q718",
+      "topic": "finetune",
+      "score": 4,
+      "question": "使用模型检查点（checkpointing）保存模型时，一般会保存哪种情况下的模型？"
+    },
+    {
+      "id": "q720",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "如果想要自定义langchain 的LLM 对象，理论上只需要准备以下哪个要素？"
+    },
+    {
+      "id": "q722",
+      "topic": "rag",
+      "score": 5,
+      "question": "LlamaIndex 在创建RAG 应用时，第一步SimpleDirectoryReader 是将知识文件解析为？"
+    },
+    {
+      "id": "q724",
+      "topic": "rag",
+      "score": 3,
+      "question": "以下代码片段中，StorageContext 的作用是什么？storage_context = StorageContext.from_defaults(per"
+    },
+    {
+      "id": "q725",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "以下哪个代码片段最适合将文本片段转换为向量表示？"
+    },
+    {
+      "id": "q731",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "在文档审阅中，为什么不建议一次输出所有的结果？"
+    },
+    {
+      "id": "q733",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "以下哪个选项最适合用于请求大模型总结一篇文章的主要内容？"
+    },
+    {
+      "id": "q736",
+      "topic": "rag",
+      "score": 3,
+      "question": "replacements 的作用是：...def get_documents(path):documents = SimpleDirectoryReader(p"
+    },
+    {
+      "id": "q739",
+      "topic": "rag",
+      "score": 3,
+      "question": "要将索引持久化到磁盘，应使用以下哪个方法？"
+    },
+    {
+      "id": "q745",
+      "topic": "prod",
+      "score": 3,
+      "question": "一家教育科技公司拟开发AI 教学产品，以下哪些方案能体现“个性化、智能化、普惠教育”？"
+    },
+    {
+      "id": "q759",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "把API Key 配置到环境变量里有哪些优点？"
+    },
+    {
+      "id": "q769",
+      "topic": "app-dev",
+      "score": 3,
+      "question": "你在需要构建公文智能处理系统，用户上传PDF 文件，系统需自动识别文本内容并生成摘要。以下哪种架构设计比较合理？"
+    },
+    {
+      "id": "q777",
+      "topic": "prompt",
+      "score": 2,
+      "question": "你在用大模型解答这个题：“一口10 米的井，蜗牛从井底向上爬，每个白天向上爬3 米，每晚滑下2 米。请问蜗牛需要多少天能爬出这口井？”。以下哪种提示方法可以提升"
+    },
+    {
+      "id": "q785",
+      "topic": "prod",
+      "score": 4,
+      "question": "在开发过程中，你发现大模型调用某工具函数时常因输入参数格式错误而失败，最可能的原因是？"
+    },
+    {
+      "id": "q786",
+      "topic": "prompt",
+      "score": 4,
+      "question": "当我们发现使用的模型在大数计算时表现不佳，哪个措施提升最大？"
+    },
+    {
+      "id": "q796",
+      "topic": "prompt",
+      "score": 5,
+      "question": "某团队需要翻译一份文档，其中包含30 条机构内部术语的英文缩写，为了确保翻译的高准确性，以下哪种方案能解决这一问题？"
+    },
+    {
+      "id": "q815",
+      "topic": "rag",
+      "score": 5,
+      "question": "你维护了一个开发者社区的大模型问答助手，但你发现有人通过上传一些恶意的文章，诱导大模型生成恶意代码。从长期防护角度，最根本的解决措施是？"
+    },
+    {
+      "id": "q827",
+      "topic": "rag",
+      "score": 3,
+      "question": "哪些代码段涉及文本序列化和标准化?"
+    },
+    {
+      "id": "q830",
+      "topic": "rag",
+      "score": 4,
+      "question": "优化RAG 应用时，需要考虑哪些因素?"
+    },
+    {
+      "id": "q835",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "在以下代码段中，哪些是设置模型训练参数的例子？"
+    },
+    {
+      "id": "q841",
+      "topic": "rag",
+      "score": 2,
+      "question": "StorageContext.from_defaults (persist_dir=PERSIST_DIR) 的作用是什么？"
+    },
+    {
+      "id": "q845",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "下面哪个Python 库函数常用于计算F1 分数？"
+    },
+    {
+      "id": "q847",
+      "topic": "agent",
+      "score": 2,
+      "question": "以下哪种情况更适合使用代码解释器插件而不是直接使用大模型？"
+    },
+    {
+      "id": "q851",
+      "topic": "prod",
+      "score": 3,
+      "question": "设计程序时，一般不会设计为调用一次大模型就处理完所有任务。下列关于如上说法的分析中，错误的是哪一项？"
+    },
+    {
+      "id": "q852",
+      "topic": "rag",
+      "score": 4,
+      "question": "通过LlamaIndex 创建RAG 应用时，一份知识文件是如何传入RAG 应用的，请选择顺序："
+    },
+    {
+      "id": "q853",
+      "topic": "prompt",
+      "score": 4,
+      "question": "如果要修改摘要生成函数，使其生成的摘要不超过80 个字，应该如何修改？"
+    },
+    {
+      "id": "q859",
+      "topic": "rag",
+      "score": 2,
+      "question": "在检测文档内容中是否存在营销表达时，下列哪种方法可以更全面地识别问题？"
+    },
+    {
+      "id": "q864",
+      "topic": "rag",
+      "score": 4,
+      "question": "在LlamaIndex 中，默认情况下，加载的数据是如何存储的？"
+    },
+    {
+      "id": "q868",
+      "topic": "rag",
+      "score": 4,
+      "question": "下列代码片段的作用是？from keras.preprocessing.sequence import pad_sequencespadded_seqs=pad"
+    },
+    {
+      "id": "q886",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "以下哪种方式可以更好地处理大模型返回结果中可能存在的错误或异常?"
+    },
+    {
+      "id": "q891",
+      "topic": "app-dev",
+      "score": 2,
+      "question": "下面的Python 代码执行了哪种文本预处理操作? import recleaned_text=re.sub(r'\\W+',\",text)"
+    },
+    {
+      "id": "q913",
+      "topic": "prompt",
+      "score": 5,
+      "question": "假设你正在使用一个大语言模型开发智能客服系统，希望生成的回复尽量简短，以适应短信通知的长度限制，要求短信语义完整。以下哪种方式更有可能实现这一目标？"
+    },
+    {
+      "id": "q919",
+      "topic": "rag",
+      "score": 4,
+      "question": "如果将RAG 与开卷考试相类比，下列哪两项描述最符合它们的相同之处？"
+    },
+    {
+      "id": "q922",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "以下哪种方式可以更好地处理大模型返回结果中可能存在的错误或异常？"
+    },
+    {
+      "id": "q926",
+      "topic": "rag",
+      "score": 5,
+      "question": "Llamalndex 在创建 RAG 应用时，第一步 SimpleDirectoryReader 是将知识文件解析为？"
+    },
+    {
+      "id": "q937",
+      "topic": "prompt",
+      "score": 4,
+      "question": "关于输入数据的描述，以下哪项是正确的？"
+    },
+    {
+      "id": "q949",
+      "topic": "app-dev",
+      "score": 5,
+      "question": "你需要大模型从客户邮件中提取结构化数据（如姓名、订单号、问题类型），以下哪两个选项有助于你达成这一目标？"
+    },
+    {
+      "id": "q951",
+      "topic": "agent",
+      "score": 3,
+      "question": "一家智能家居公司重新设计空调控制面板，需优化老年人使用体验。下列哪些改进符合交互设计原则？"
+    }
+  ]
+}

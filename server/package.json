@@ -1,0 +1,31 @@
+{
+  "name": "acp-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "阿里云大模型 ACP 模拟考试后端（Express + MongoDB）",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=16.20.1"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "dev:memory": "node scripts/dev-memory.js",
+    "export:bank": "node scripts/export-bank.js",
+    "test": "node --test \"test/*.test.js\"",
+    "smoke": "node scripts/smoke.js",
+    "smoke:prod": "node scripts/prod-smoke.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.2",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^7.2.0",
+    "mongoose": "^8.24.9"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.4.3",
+    "supertest": "^7.1.4"
+  }
+}

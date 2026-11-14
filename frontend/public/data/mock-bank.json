@@ -1,0 +1,476 @@
+[
+  {
+    "id": "q031",
+    "type": "single",
+    "topic": "app-dev",
+    "question": "你正在使用 Qwen-Plus 生成商品介绍文档，完整的提示词是“请帮我生成我们公司最新智能手表的产品介绍”。但你发现生成的内容是介绍其他公司的产品。以下策略中，应首先尝试的是？",
+    "options": [
+      "调低温度参数（Temperature）以降低随机性",
+      "调低 Top-p 值缩小候选词范围",
+      "改进提示词（明确产品信息、文档主题和结构）",
+      "提高 Top-p 值扩大候选词范围"
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "出现“写成了别家公司产品”的根本原因通常是提示词信息不足或不够具体，导致模型根据语料中更常见的品牌/产品自行填充。最优先的做法是：在提示词中给出品牌名称、产品型号、核心卖点等关键信息；明确要求文档结构（如“产品概述-功能亮点-技术参数-价格与售后”）。只有先把输入说清楚，模型才有依据生成准确的内容。",
+    "source": "mock_exam_2/01.md 题目31",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/01.md",
+    "points": 1
+  },
+  {
+    "id": "q455",
+    "type": "single",
+    "topic": "app-dev",
+    "question": "关于如下代码的解释中，正确的是哪一项？",
+    "options": [
+      "基于已有thread创建运行任务,使用流式输出",
+      "基于已有thread创建运行任务,使用非流式输出",
+      "创建thread并运行任务,使用流式输出",
+      "创建thread并运行任务,使用非流式输出"
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "暂无",
+    "source": "mock_exam_2/07.md 题目17",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/07.md",
+    "points": 1
+  },
+  {
+    "id": "q835",
+    "type": "multiple",
+    "topic": "app-dev",
+    "question": "在以下代码段中，哪些是设置模型训练参数的例子？",
+    "options": [
+      "learning_rate = 0.001",
+      "model=\"qwen-7b - chat\"",
+      "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')",
+      "optimizer = AdamW(model.parameters(), lr=learning_rate)",
+      "num_epochs = 3",
+      "batch_size = 64"
+    ],
+    "answer": [
+      "A",
+      "D",
+      "E",
+      "F"
+    ],
+    "explanation": "直接控制训练过程（如学习率、批次大小），可通过调整影响模型性能（如epoch 数）",
+    "source": "mock_exam_3/05.md 题目212",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/05.md",
+    "points": 2
+  },
+  {
+    "id": "q401",
+    "type": "single",
+    "topic": "app-dev",
+    "question": "当你在工作中使用大语言模型(如: Qwen - Max)优化录音稿时, 应该优先考虑的目标是什么?",
+    "options": [
+      "提高文本的口语化程度,便于录音和听众理解",
+      "确保每个句子都保持原文的长度和复杂度",
+      "尽量引用原始资料中的每个细节",
+      "确保录音稿内容高度技术化,使用专业术语"
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "",
+    "source": "mock_exam_2/06.md 题目35",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/06.md",
+    "points": 1
+  },
+  {
+    "id": "q937",
+    "type": "single",
+    "topic": "prompt",
+    "question": "关于输入数据的描述，以下哪项是正确的？",
+    "options": [
+      "输入数据仅用于生成样例",
+      "输入数据无需说明",
+      "输入数据是可选的",
+      "输入数据应当明确具体含义及其用途",
+      "输入数据可以通过模糊的引导词来定义其作用",
+      "输入数据不影响模型输出格式"
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "D.正确。输入数据应当明确具体含义及其用途。 A. 错误。输入数据不仅用于生成样例，还用于实际任务处理。 B.错误。输入数据需要说明，以便模型理解其用途。 C.错误。输入数据通常不是可选的，它是模型处理的基础。 E.错误。输入数据不应通过模糊的引导词来定义其作用，应明确具体。 F.错误。输入数据对模型输出格式有影响。",
+    "source": "mock_exam_3/08.md 题目16",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/08.md",
+    "points": 1
+  },
+  {
+    "id": "q030",
+    "type": "single",
+    "topic": "prompt",
+    "question": "你在优化一个多语言翻译系统，发现文学翻译经常“失去原文意境”，而技术文档翻译经常“用词生硬、难以理解”。现有提示词已包含“保持专业性”和“语言流畅”要求，并添加了示例。下一步最应优先尝试的策略是？",
+    "options": [
+      "要求模型分两次翻译：先直译再人工润色",
+      "提高温度参数（Temperature=1.0）增强灵活性",
+      "在现有模板中增加更多诗歌和手册的对照示例",
+      "为文学和技术翻译分别设计专用提示词模板"
+    ],
+    "answer": [
+      "D"
+    ],
+    "explanation": "文学与技术文档对译文风格的要求截然不同：文学更强调意境、韵味、修辞；技术强调准确、术语一致、易于理解。在同一个提示词里同时满足二者往往顾此失彼。将两类文本拆分、为每类单独配置提示词模板，能精准地约生成风格（例如文学模板强调“保留情感与意象”，技术模板强调“术语一致、句式简明”）。",
+    "source": "mock_exam_2/01.md 题目30",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/01.md",
+    "points": 1
+  },
+  {
+    "id": "q658",
+    "type": "multiple",
+    "topic": "prompt",
+    "question": "通过LlamaIndex 创建RAG 应用，在修改默认prompt 时，包含以下哪些步骤？",
+    "options": [
+      "定义新的prompt 字符串，将chunk 和query 的位置空出来",
+      "使用新的prompt 初始化一个PromptTemplate 对象",
+      "对新的prompt 进行保存，使得LlamaIndex 中的源代码prompt 也变成中文",
+      "用index 的update_prompts 方法将新的prompt 同步上去"
+    ],
+    "answer": [
+      "A",
+      "B"
+    ],
+    "explanation": "C 和D 选项存在事实性错误",
+    "source": "mock_exam_3/01.md 题目14",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/01.md",
+    "points": 2
+  },
+  {
+    "id": "q079",
+    "type": "single",
+    "topic": "prompt",
+    "question": "在示例中，提示词明确的任务需求是什么？",
+    "options": [
+      "对文本进行扩写和润色",
+      "增加模型的训练数据",
+      "减少模型的推理时间",
+      "增加模型的参数数量"
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "",
+    "source": "mock_exam_2/02.md 题目5",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/02.md",
+    "points": 1
+  },
+  {
+    "id": "q719",
+    "type": "single",
+    "topic": "rag",
+    "question": "在RAGAS 的这行代码中，data_samples 可能是什么格式？dataset = Dataset.from_dict(data_samples)",
+    "options": [
+      "pythondata_samples = {\"question\":\"sample_question\",\"answer\":\"sample_answer\",\"contexts\":\"sample_contexts\"}",
+      "pythondata_samples = {",
+      "pythondata_samples = {\"question\":\"sample_question\",\"answer\":\"sample_answer\",\"contexts\":[\"sample_context1\",\"sample_context2\"]}",
+      "pythondata_samples = DataFrame(question=\"sample_question\",answer=\"sample_answer\",contexts=\"sample_contexts\")"
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "在RAGAS（检索增强生成评估框架）中，data_samples 通常需要包含以下核心字段： question: 用户提问（字符串）answer: 模型生成的答案（字符串）contexts: 检索到的参考 上下文（列表形式，因RAG 可能返回多个相关文档片段）",
+    "source": "mock_exam_3/02.md 题目79",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/02.md",
+    "points": 1
+  },
+  {
+    "id": "q443",
+    "type": "single",
+    "topic": "rag",
+    "question": "在通过大语言模型检测文档内容中是否存在营销表达时，下列哪种方法可以更全面地识别问题？",
+    "options": [
+      "一次性生成所有类型的识别结果",
+      "按照营销表达分类逐条单独识别营销词汇",
+      "仅识别有内容错误的部分",
+      "按文档段落扫描整篇文档,每段完成所有类型的识别,汇总后一次性返回结果"
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "暂无",
+    "source": "mock_exam_2/07.md 题目4",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/07.md",
+    "points": 1
+  },
+  {
+    "id": "q629",
+    "type": "multiple",
+    "topic": "rag",
+    "question": "在RAG系统中，关于文档解析阶段可能遇到的问题，以下说法正确的有哪些？",
+    "options": [
+      "即使原始文档质量很高,也可能因为解析工具的问题导致解析出错",
+      "不同版本的Word文档,即使内容相同,也可能因为格式差异导致解析结果不同",
+      "PDF文件的解析通常比纯文本文件更简单",
+      "在线文档由于其动态特性,解析难度通常比静态文件更大",
+      "选择合适的解析工具和方法对于提高解析效率和准确性至关重要",
+      "文档解析阶段的问题只跟技术层面相关,与业务层面无关"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanation": "正确答案是A、B、D、E。选项A指出解析工具的问题可能导致解析错误，这是正确的。选项B提到不同版本的Word文档可能因格式差异导致解析结果不同，这也是正确的。选项D说明在线文档的动态特性增加了解析难度，这是正确的。选项E强调选择合适的解析工具和方法的重要性，这是正确的。选项C和F不正确，因为PDF文件的解析并不一定比纯文本文件更简单，且文档解析阶段的问题不仅限于技术层面，还与业务层面有关。",
+    "source": "mock_exam_2/09.md 题目43",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/09.md",
+    "points": 2
+  },
+  {
+    "id": "q635",
+    "type": "multiple",
+    "topic": "rag",
+    "question": "通过LlamaIndex创建RAG应用时，编写了如下代码，这段代码有哪些问题？",
+    "options": [
+      "重排选中的chunk数大于初步召回的chunk数",
+      "rerank方法不应该放在node_postprocessors中",
+      "LlamaIndex在RAG回答时不可以使用流式输出",
+      "相似度阈值设置过高"
+    ],
+    "answer": [
+      "A",
+      "D"
+    ],
+    "explanation": "",
+    "source": "mock_exam_2/09.md 题目49",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/09.md",
+    "points": 2
+  },
+  {
+    "id": "q049",
+    "type": "single",
+    "topic": "finetune",
+    "question": "梯度下降算法中，如果学习率设置过大可能导致：",
+    "options": [
+      "在最优解附近震荡",
+      "参数更新幅度不足",
+      "收敛速度过慢",
+      "需要更多迭代次数才能收敛"
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "学习率过大时，每次参数更新步长过大，可能跨过最优点来回反跳，甚至发散；表现为在最优解附近震荡而无法稳定收敛。过低的学习率才会导致更新幅度不足、收敛慢、迭代次数增多。",
+    "source": "mock_exam_2/01.md 题目50",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/01.md",
+    "points": 1
+  },
+  {
+    "id": "q007",
+    "type": "single",
+    "topic": "finetune",
+    "question": "模型微调最适合以下解决哪种问题？",
+    "options": [
+      "需要实时检索最新互联网信息的任务",
+      "需要提升模型在特定任务的表现",
+      "需要快速响应简单问答的任务",
+      "需要结合用户界面操作的任务"
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "相关知识点：微调通过领域数据适配模型参数，针对性优化任务性能。",
+    "source": "mock_exam_2/01.md 题目7",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/01.md",
+    "points": 1
+  },
+  {
+    "id": "q875",
+    "type": "multiple",
+    "topic": "finetune",
+    "question": "微调qwen2.5 - 1.5b 模型过程中发现模型开始欠拟合，可采取的优化措施包括？",
+    "options": [
+      "增加训练数据量",
+      "增加训练集迭代次数（epoch）",
+      "增加lora_rank 值",
+      "学习率增加一倍"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "A 增加训练数据量，能让模型学习更多特征，改善欠拟合。B 增加迭代次数（epoch）， 使模型对训练数据学习更充分，有助于解决欠拟合。C 增加lora_rank 值，提升LORA 微调的 复杂度，让模型能学习更复杂模式，改善欠拟合。D 学习率过大可能导致跳过最优解，欠拟合 时提高学习率无法解决模型“没学好” 的问题。",
+    "source": "mock_exam_3/06.md 题目265",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/06.md",
+    "points": 2
+  },
+  {
+    "id": "q840",
+    "type": "single",
+    "topic": "finetune",
+    "question": "在设定大语言模型的训练参数时，哪个参数可以影响模型每次更新时所考虑的数据量，并间接影响到模型收敛速度和内存使用？",
+    "options": [
+      "学习率",
+      "正则化",
+      "批大小",
+      "动态学习率策略"
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "",
+    "source": "mock_exam_3/05.md 题目218",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/05.md",
+    "points": 1
+  },
+  {
+    "id": "q872",
+    "type": "single",
+    "topic": "agent",
+    "question": "你为某大型企业开发内部问答机器人时，员工A 查询“法务接口人” 时，机器人总是返回其他部门的法务接口人信息。以下哪种方案优化该问题最有效？",
+    "options": [
+      "增加召回片段数量",
+      "减少召回片段数量",
+      "结合读取的员工部门信息，对query 进行改写",
+      "对用户query 重复检索3 次后返回结果"
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "A ：增加召回片段数量，就像找东西时扩大寻找范围，但没考虑员工所在部门，还是会 混进其他部门的信息，解决不了问题。B ：减少召回片段数量，只是找得少了，但没针对部门 调整，仍可能找错部门，没用。C ：结合员工部门信息改写查询内容。比如员工A 在销售部， 就把查询变成“销售部法务接口人”，这样就能精准找到自己部门的接口人，直接解决总返回 其他部门信息的问题。D ：对用户查询重复检索3 次。每次查的内容都一样，不调整部门信息， 还是会返回其他部门的结果。",
+    "source": "mock_exam_3/06.md 题目261",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/06.md",
+    "points": 1
+  },
+  {
+    "id": "q938",
+    "type": "single",
+    "topic": "agent",
+    "question": "某社交平台需自动屏蔽违规评论，要求同时处理文字、图片。以下哪种方案更合理？",
+    "options": [
+      "使用多模态模型拦截图文混合违规内容，如 qwen-vl 72b",
+      "建立独立的关键词库分别过滤文本和图片",
+      "延迟显示所有 AI生成内容等待人工审核",
+      "要求用户上传内容前手动选择内容分类标签"
+    ],
+    "answer": [
+      "A"
+    ],
+    "explanation": "A.正确。多模态模型如Qwen-VL 72B 能够同时处理文本和图片内容，有效拦截图文混 合违规内容。 B.错误。建立独 立关键词库分别过滤文本和图片效率低且效果差。 C. 错误。延迟显示并等待人工审核不符合自动化要求。 D. 错误。要求用户手动选择分类标签增加了用户负担且不可行。",
+    "source": "mock_exam_3/08.md 题目17",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/08.md",
+    "points": 1
+  },
+  {
+    "id": "q947",
+    "type": "multiple",
+    "topic": "agent",
+    "question": "关于多模态技术底层原理，正确的说法是？",
+    "options": [
+      "文生图模型生成不同尺寸图像时，必须重新训练模型",
+      "视频合成所花费的时间与可用的算力呈负相关",
+      "图像理解模型也需要先将视频或图像分词化再做处理",
+      "实现 “方言语音合成”需要训练模型建立方言音素与标准发音的映射关系"
+    ],
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanation": "A.错误。文生图模型可通过调整参数生成不同尺寸图像无需重新训练。 B. 错误。视频合成时间与算力呈正相关，更高算力缩短处理时间。 C.正确。图像理解模型需先将视频或图像分词化处理便于进一步分析。 D.正确。“方言语音合成”需要建立方言音素与标准发音映射关系以实现转换。",
+    "source": "mock_exam_3/08.md 题目26",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/08.md",
+    "points": 2
+  },
+  {
+    "id": "q376",
+    "type": "single",
+    "topic": "agent",
+    "question": "多模态学习的核心目标之一是实现不同模态数据间的有效整合。以下哪个步骤不属于典型的多模态学习处理流程？",
+    "options": [
+      "多模态表征学习",
+      "多模态特征降维",
+      "多模态对齐与融合",
+      "多模态任务特定的转化"
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "",
+    "source": "mock_exam_2/06.md 题目10",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/06.md",
+    "points": 1
+  },
+  {
+    "id": "q682",
+    "type": "single",
+    "topic": "prod",
+    "question": "在下列哪项任务中，大模型可能不是最佳工具选择？",
+    "options": [
+      "分析用户反馈，识别产品改进建议的主题。",
+      "确定两种药物治疗效果是否有统计学上的显著差异。",
+      "自动为新闻文章分配合适的标签类别。",
+      "从大量日志数据中自动检测异常登录行为"
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "确定统计学显著性需专业工具，大模型更适合语言相关任务。其他选项均可通过LLM 实 现（或辅助）。",
+    "source": "mock_exam_3/01.md 题目40",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/01.md",
+    "points": 1
+  },
+  {
+    "id": "q052",
+    "type": "single",
+    "topic": "prod",
+    "question": "你在开发一个内部IT系统，希望能够自动处理员工的请求：“我的投影仪故障了，请安排维修并通知下午会议改线上”。以下哪种技术方案有效、且能尽量减少人力投入？",
+    "options": [
+      "通过大模型判断接单人，自动将任务指派给接单人，通知其创建维修工单并调整会议。",
+      "识别请求中的关键字（如“投影仪故障”“会议改线上”），匹配规则系统后调用API完成任务。",
+      "通过提示词引导大模型拆解任务为多步骤，然后自动调用维修系统和会议系统API完成操作。",
+      "通过提示词引导大模型直接生成维修工单和会议调整结果，无需调用现有系统。"
+    ],
+    "answer": [
+      "C"
+    ],
+    "explanation": "自动化程度最高：模型先解析并拆分“报修 + 调整会议”两项子任务，再按顺序调用已有运维/会议系统 API；整条业务闭环，无人工介入，对接现有系统；没有重复造轮子，利用已有系统能力。",
+    "source": "mock_exam_2/01.md 题目53",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/01.md",
+    "points": 1
+  },
+  {
+    "id": "q746",
+    "type": "multiple",
+    "topic": "prod",
+    "question": "某跨境电商平台的客服系统需要处理多语言用户咨询，在进行文本合规检查时发现部分违规内容无法被检测出来。哪两个方案能提供多语言文本的合规检查效果？",
+    "options": [
+      "强制要求用户使用英语提问，其他语言咨询转入人工处理",
+      "建立多语言同义词库，覆盖常见违规表述的变体（如“免税代购” 的谐音/ 缩写形式）",
+      "使用跨语言语义理解模型，识别违规意图而非依赖关键词匹配",
+      "将非英语内容翻译为英语后复用单语种审核规则"
+    ],
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanation": "覆盖变体和语义理解结合能显著提升多语言合规检查效果",
+    "source": "mock_exam_3/03.md 题目106",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_3/03.md",
+    "points": 2
+  },
+  {
+    "id": "q348",
+    "type": "single",
+    "topic": "prod",
+    "question": "在使用大型语言模型之前，用户首先应该做什么？",
+    "options": [
+      "直接开始使用模型",
+      "阅读并理解服务条款和隐私政策",
+      "尝试模型的所有功能",
+      "与模型进行多次交互"
+    ],
+    "answer": [
+      "B"
+    ],
+    "explanation": "",
+    "source": "mock_exam_2/05.md 题目57",
+    "sourceUrl": "https://github.com/yi-cheng0824/aliyun-acp/blob/main/real/mock_exam_2/05.md",
+    "points": 1
+  }
+]

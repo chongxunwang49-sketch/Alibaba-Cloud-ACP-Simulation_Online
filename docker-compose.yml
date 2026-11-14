@@ -1,0 +1,105 @@
+name: acp
+
+x-default-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  mongo:
+    image: mongo:7.0
+    restart: always
+    command: ["mongod", "--wiredTigerCacheSizeGB", "0.25", "--bind_ip_all"]
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME:-acpadmin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:?MONGO_ROOT_PASSWORD required}
+      MONGO_INITDB_DATABASE: ${MONGODB_DATABASE:-acp}
+      TZ: ${TZ:-Asia/Shanghai}
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          mongosh --quiet -u "$$MONGO_INITDB_ROOT_USERNAME" -p "$$MONGO_INITDB_ROOT_PASSWORD"
+          --authenticationDatabase admin --eval "db.adminCommand({ping:1}).ok" | grep -q 1
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    mem_limit: 640m
+    logging: *default-logging
+    networks:
+      - acp-net
+
+  api:
+    build:
+      context: ./server
+      args:
+        NPM_REGISTRY: ${NPM_REGISTRY:-https://registry.npmjs.org}
+    restart: always
+    init: true
+    environment:
+      NODE_ENV: production
+      PORT: "3004"
+      HOST: "0.0.0.0"
+      MONGODB_URI: "mongodb://${MONGO_ROOT_USERNAME:-acpadmin}:${MONGO_ROOT_PASSWORD:?MONGO_ROOT_PASSWORD required}@mongo:27017/${MONGODB_DATABASE:-acp}?authSource=admin"
+      TRUST_PROXY: "1"
+      SEED_ON_START: ${SEED_ON_START:-1}
+      SEED_FORCE: ${SEED_FORCE:-0}
+      APP_TIMEZONE: ${TZ:-Asia/Shanghai}
+      CORS_ORIGIN: ""
+      TZ: ${TZ:-Asia/Shanghai}
+      NODE_OPTIONS: "--max-old-space-size=256"
+    expose:
+      - "3004"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - >-
+          fetch('http://127.0.0.1:3004/api/health').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 30s
+    stop_grace_period: 15s
+    mem_limit: 384m
+    logging: *default-logging
+    networks:
+      - acp-net
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        NPM_REGISTRY: ${NPM_REGISTRY:-https://registry.npmjs.org}
+    restart: always
+    ports:
+      - "${WEB_PORT:-80}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/healthz || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+    mem_limit: 128m
+    logging: *default-logging
+    networks:
+      - acp-net
+
+volumes:
+  mongo-data:
+
+networks:
+  acp-net:
+    driver: bridge

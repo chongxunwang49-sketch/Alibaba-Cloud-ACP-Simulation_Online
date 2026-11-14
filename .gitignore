@@ -1,0 +1,40 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+# 本地部署私钥（只在本机保留）
+.deploy/
+_verify/
+
+# 构建产物
+dist/
+frontend/dist/
+ACP模拟/dist/
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+logs/
+*.tgz
+tmp/
+
+# 截图/调试产物
+ACP模拟/_build/shots/
+ACP模拟/_build/edge-profile/
+__pycache__/
+*.pyc
+.workbuddy/
+**/screenshots/
+# 交付截图需要进仓库
+!docs/screenshots/
+!docs/screenshots/**
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
