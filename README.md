@@ -125,6 +125,7 @@ docker compose ps         # 三个服务都应为 healthy
 - 手机端效果：侧栏抽屉 + 遮罩、答题卡/解析抽屉、选项大按钮、表格只保留关键列、模拟考顶栏只留计时/退出/交卷，页面无横向滚动。
 - 验收尺寸：390 × 844（iPhone 14/15 逻辑像素），所有页面 `document.documentElement.scrollWidth === 390`。
 - 截图：[mobile-home.png](docs/screenshots/mobile-home.png)、[mobile-practice.png](docs/screenshots/mobile-practice.png)、[mobile-exam.png](docs/screenshots/mobile-exam.png)、[mobile-questions.png](docs/screenshots/mobile-questions.png)。
+- 手机扫码：[qr.png](docs/screenshots/qr.png)（内容即 <http://120.55.234.224/>）。
 
 ## 已知限制
 
